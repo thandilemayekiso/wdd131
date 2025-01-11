@@ -1,0 +1,132 @@
+.tinos-regular {
+    font-family: "Tinos", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .tinos-bold {
+    font-family: "Tinos", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  :root {
+    --primary-color: #4A90E2;
+    --secondary-color: #FF6F61;
+    --background-color: #F7F7F7;
+    --text-color: #333333;
+    --accent-color: #A0D8B3;
+    --link-color: #2A3D7F;
+}
+
+/* Apply background and text colors */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    color: var(--primary-color);
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+/* Header Section */
+header {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Button Style */
+.button {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--primary-color);
+}
+
+/* Footer Section */
+footer {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    padding: 10px;
+    text-align: center;
+}
+
+/* Main Content */
+.content {
+    padding: 20px;
+}
+
+nav a:hover {border: #2A3D7F;
+border: 2px solid;}
+
+nav {display: flex;
+justify-content: space-evenly;
+}
+
+main {
+    max-width: 2000px;
+    margin-inline-start: auto;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between cards */
+    justify-items: center; /* Center the items horizontally */
+}
+
+/* Individual card styling */
+.card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Make sure the cards take up the full width available in their grid cells */
+    text-align: center;
+}
+
+.card i {
+    font-size: 40px; /* Icon size */
+    margin-bottom: 10px; /* Space between icon and text */
+}
+
+
+
+.card p {
+    color: #666;
+    font-size: 14px;
+}
+
+a {
+    color: #4A90E2;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+a:hover {
+    color: #FF6F61;
+    text-decoration: underline;
+}
