@@ -1,0 +1,19 @@
+
+section {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+
+
+nav ul {
+    justify-content: center;
+    gap: 2rem;
+}
+
+main {
+    padding: 2rem;
+}
+
+footer {
+    padding: 1.5rem 0;
+}
