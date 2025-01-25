@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beautiful Place</title>
+  <link rel="stylesheet" href="css/place.css">
+  <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+  <!-- Header Section -->
+  <header class="header">
+    <h1>Beautiful Country of Kenya</h1>
+    <nav class="nav">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <picture>
+      <source srcset="images/hero1.webp" media="(min-width: 440px)">
+      <source srcset="images/hero2.webp" media="(max-width: 500px)">
+      <img src="images/hero2.webp" alt="Scenic View" class="hero-img">
+    </picture>
+   
+  </section>
+
+  <!-- Main Content -->
+  <main>
+    <section class="info">
+      <h3>About Kenya</h3>
+      <p>Discover the beauty, culture, and nature of this amazing place. A perfect country to explore and unwind.</p>
+      <p>Kenya, located in East Africa, is renowned for its diverse wildlife, stunning landscapes, and rich cultural heritage. It is home to the Great Rift Valley, Mount Kenya, and iconic national parks like Maasai Mara.</p>
+      <p>Kenya's rich history has been shaped by centuries of indigenous cultures, colonial rule, and struggle for freedom and equality. The country has been at the forefront of developing sustainable tourism, with numerous destinations offering unique experiences, such as the Maasai Mara National Park, the Kilimanjaro National Park, and the Elephant River Falls.</p>
+    </section>
+
+    <!-- Geographical Data -->
+    <section class="geography">
+        <h3>Geographical Data</h3>
+        <ul>
+          <li><strong>Capital:</strong> Nairobi</li>
+          <li><strong>Population:</strong> Approximately 54 million</li>
+          <li><strong>Area:</strong> 580,367 km²</li>
+          <li><strong>Neighboring Countries:</strong> Tanzania, Uganda, South Sudan, Ethiopia, and Somalia</li>
+          <li><strong>Landmarks:</strong> Mount Kenya, Maasai Mara, Amboseli National Park, Diani Beach</li>
+        </ul>
+      </section>
+
+    <!-- Weather Section -->
+    <section class="weather">
+    <h3>Weather <span class="weather-icon">⛅</span></h3>
+    <p><strong>Temperature:</strong> <span id="temperature">24 °C</span></p>
+    <p><strong>Wind Speed:</strong> <span id="wind-speed">10 km/h</span></p>
+    <p><strong>Wind Chill:</strong> <span id="wind-chill">N/A</span></p>
+  
+    <!-- Kenya Weather Details -->
+    <h4>Climate Overview</h4>
+    <ul>
+      <li><strong>Seasons:</strong> Wet (March–May, October–November) and Dry (June–September, December–February)</li>
+      <li><strong>Average Annual Rainfall:</strong> 400 mm - 2000 mm, depending on the region</li>
+      <li><strong>Temperature Range:</strong> 10 °C - 30 °C</li>
+      <li><strong>Hottest Month:</strong> February</li>
+      <li><strong>Coldest Month:</strong> July</li>
+      <li><strong>Climate Zones:</strong> Equatorial (coast), semi-arid (northern Kenya), and temperate (highlands)</li>
+    </ul>
+  </section>
+  
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; <span id="year"></span>. Kenya. All rights reserved.</p>
+    <p>Last Updated: <span id="last-modified"></span></p>
+  </footer>
+
+  <script src="js/place.js" defer></script>
+</body>
+
+</html>
