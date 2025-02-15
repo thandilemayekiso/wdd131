@@ -6,13 +6,14 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    color: #333;
-    background-color: #f9f9f9;
+    color: #222; /* Improved contrast */
+    background-color: #f5f5f5; /* Softer background */
 }
+section {    
 
-
+}
 header {
-    background: #0066cc;
+    background: #004999; /* Darker shade for better contrast */
     color: white;
     padding: 1rem 0;
     text-align: center;
@@ -27,7 +28,7 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: space-around;
-    background: #005bb5;
+    background: #003d80; /* Better contrast */
     margin: 0;
 }
 
@@ -39,7 +40,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #003f8c;
+    background-color: #002a66; /* Darker hover color for accessibility */
     border-radius: 4px;
 }
 
@@ -48,13 +49,14 @@ main {
     margin: 1rem auto;
     padding: 1rem;
     background: white;
-    border: 1px solid #ddd;
+    border: 1px solid #ccc; /* Softer border */
     border-radius: 4px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
 }
 
 main h2 {
     text-align: center;
-    color: #005bb5;
+    color: #003d80; /* Better contrast */
 }
 
 section {
@@ -72,7 +74,7 @@ figure img {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
-    border: 1px solid #ddd;
+    border: 1px solid #ccc; /* Softer border */
 }
 
 figcaption {
@@ -81,19 +83,21 @@ figcaption {
 }
 
 @media (min-width: 600px) {
-    main {
-        grid-template-columns: repeat(2, 1fr);
+    section {
+        grid-template-columns: repeat(2, 1fr); /* Fixed layout issue */
     }
 }
+
 footer {
     text-align: center;
     padding: 1rem 0;
-    background: #0066cc;
+    background: #004999; /* Darker shade for contrast */
     color: white;
     margin-top: 1rem;
 }
 
 footer a {
-    color: #ffdd00;
+    color: #ffcc00; /* More readable contrast */
     text-decoration: none;
 }
+

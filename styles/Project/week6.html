@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Break Dance Hub</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script defer src="scripts/scripts.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Break Dance Hub</h1>
+        <nav>
+            <ul>
+                <li><a href="https://www.redbull.com/int-en/event-series/bc-one">Red Bull Dance</a></li>
+                <li><a href="https://www.worldofdance.com/">World of Dance</a></li>
+                <li><a href="https://www.stanceelements.com/">Undisputed Bboy Masters</a></li>
+                <li><a href="https://www.mihrankstudios.com/" target="_blank">MihranTV - Dance Tutorials</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="brand-ads">
+            <h2>Brand Advertisements</h2>
+            <div class="ads-container">
+                <img src="images/nike.jpg" alt="Nike" width="1500">
+                <img src="images/adidas.png" alt="Adidas" width="1500">
+                <img src="images/puma.png" alt="Puma" width="1500">
+                <img src="images/reebok.jpg" alt="Reebok" width="1500">
+            </div>
+        </section>
+        
+        <section id="linked-videos">
+            <h2>Featured Videos & Tutorials</h2>
+            <div class="videos-container">
+                <div class="video">
+                    
+                </div>
+                <div class="video">
+                    <a href="videos/powermoves.mp4" target="_blank">Tayrock Studios - Power Moves</a>
+                </div>
+                <div class="video">
+                    <a href="videos/dance.mp4" target="_blank">Freestyle Breakdancing</a>
+                </div>
+                <div class="video">
+                    <a href="videos/teaser.mp4" target="_blank">TayRock Studios Channel Teaser</a>
+                </div>
+
+            </div>
+        </section>
+        
+        <section id="submission-form">
+            <h2>Submit Your Break Dance Video</h2>
+            <form id="videoForm">
+                <label for="title">Video Title:</label>
+                <input type="text" id="title" name="title" required>
+                
+                <label for="video-url">Video URL (YouTube or Vimeo):</label>
+                <input type="url" id="video-url" name="video_url" required>
+                
+                <label for="style">Break Dance Style:</label>
+                <select id="style" name="style" required>
+                    <option value="bboying">B-boying</option>
+                    <option value="popping">Popping</option>
+                    <option value="locking">Locking</option>
+                    <option value="house">House Dance</option>
+                </select>
+                
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" rows="4" required></textarea>
+                
+                <button type="submit">Submit Video</button>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Break Dance Hub. All rights reserved.</p>
+        <p>South Africa</p>
+        <p>Last Updated: <span id="last-modified"></span></p>
+    </footer>
+</body>
+</html>

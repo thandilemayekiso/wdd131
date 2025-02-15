@@ -1,40 +1,59 @@
-const products = [
-    { id: "fc-1888", name: "Flux Capacitor", averagerating: 4.5 },
-    { id: "fc-2050", name: "Power Laces", averagerating: 4.7 },
-    { id: "fs-1987", name: "Time Circuits", averagerating: 3.5 },
-    { id: "ac-2000", name: "Low Voltage Reactor", averagerating: 3.9 },
-    { id: "jj-1969", name: "Warp Equalizer", averagerating: 5.0 }
-];
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("videoForm");
+    const videoList = document.getElementById("video-list");
 
-// Populate product dropdown
-document.addEventListener("DOMContentLoaded", function() {
-    const productSelect = document.getElementById("product");
-    
-    products.forEach(product => {
-        let option = document.createElement("option");
-        option.value = product.id;
-        option.textContent = product.name;
-        productSelect.appendChild(option);
+    // Load stored videos from localStorage
+    function loadVideos() {
+        const storedVideos = JSON.parse(localStorage.getItem("videos")) || [];
+        storedVideos.forEach(video => addVideoToDOM(video));
+    }
+
+    // Add video to the DOM dynamically
+    function addVideoToDOM(video) {
+        const videoDiv = document.createElement("div");
+        videoDiv.classList.add("video");
+
+        videoDiv.innerHTML = `
+            <h3>${video.title}</h3>
+            <p><strong>Style:</strong> ${video.style}</p>
+            <p>${video.description}</p>
+            <a href="${video.url}" target="_blank">Watch Video</a>
+        `;
+
+        videoList.prepend(videoDiv);
+    }
+
+    // Handle form submission
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const title = document.getElementById("title").value.trim();
+        const videoUrl = document.getElementById("video-url").value.trim();
+        const style = document.getElementById("style").value;
+        const description = document.getElementById("description").value.trim();
+
+        if (!title || !videoUrl || !style || !description) {
+            alert("All fields are required.");
+            return;
+        }
+
+        const newVideo = { title, url: videoUrl, style, description };
+
+        // Save to localStorage
+        const storedVideos = JSON.parse(localStorage.getItem("videos")) || [];
+        storedVideos.push(newVideo);
+        localStorage.setItem("videos", JSON.stringify(storedVideos));
+
+        // Add to DOM
+        addVideoToDOM(newVideo);
+
+        // Reset form
+        form.reset();
     });
-});
 
-// Form submission event listener
-document.getElementById("reviewForm").addEventListener("submit", function(event) {
-    event.preventDefault();
-    alert("Thank you for your review! Your feedback has been submitted successfully.");
-    
-    // Increment review counter in localStorage
-    let reviewCount = localStorage.getItem("reviewCount") || 0;
-    reviewCount = parseInt(reviewCount) + 1;
-    localStorage.setItem("reviewCount", reviewCount);
-    
-    this.submit();
-});
+    // Show last modified date
+    document.getElementById("last-modified").textContent = document.lastModified;
 
-// Display review counter on review.html
-if (window.location.pathname.includes("review.html")) {
-    document.addEventListener("DOMContentLoaded", function() {
-        let reviewCount = localStorage.getItem("reviewCount") || 0;
-        document.getElementById("reviewCounter").textContent = `Total Reviews Submitted: ${reviewCount}`;
-    });
-}
+    // Load existing videos
+    loadVideos();
+});
